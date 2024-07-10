@@ -14,22 +14,16 @@ class Halaman1pages extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Halaman 12",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: () => const Halaman2pages()));
-                  // Navigator.pushNamed(context, "/second", arguments: 1);
-                  // context.pushNamed('/page2');
-                  // context.goNamed('/page2');
-                  context.pushNamed(RouteNames.halaman2,
-                      extra: {'angka': 1, 'username': 'achmad'});
+                  context.pushNamed(RouteNames.mainPage);
                 },
                 child: Text('Menuju Halaman 2')),
             ElevatedButton(

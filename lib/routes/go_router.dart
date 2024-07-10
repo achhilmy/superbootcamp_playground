@@ -19,6 +19,11 @@ class AppRouter {
       builder: (context, state) => SplashPage(),
     ),
     GoRoute(
+      path: RouteNames.mainPage,
+      name: RouteNames.mainPage,
+      builder: (context, state) =>  MainPage(),
+    ),
+    GoRoute(
       path: RouteNames.halaman1,
       name: RouteNames.halaman1,
       builder: (context, state) => Halaman1pages(),

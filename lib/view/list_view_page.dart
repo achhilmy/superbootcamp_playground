@@ -67,17 +67,7 @@ class ListViewPages extends StatelessWidget {
                   ),
                 );
               })),
-      bottomSheet: IconButton(
-        color: Colors.purple,
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.black,
-        ),
-        onPressed: () {
-          // Navigator.pop(context);
-          context.pop();
-        },
-      ),
+
       // bottomNavigationBar: BottomNavigationBar(
       //   items: ),
     );

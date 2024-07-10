@@ -6,12 +6,12 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('Navigation with cubit'),
-        backgroundColor: Colors.purple,
-      ),
-      drawer: const DrawerPage(),
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: Text('Navigation with cubit'),
+      //   backgroundColor: Colors.purple,
+      // ),
+      // drawer: const DrawerPage(),
       body: BlocBuilder<BottomNavCubit, BottomNavState>(
         builder: (context, state) {
           switch (state.index) {

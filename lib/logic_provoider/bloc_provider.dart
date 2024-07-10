@@ -11,7 +11,21 @@ class BlocProviderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BlocProvider(create: (context) => DrawerBloc(), child: Halaman1pages()),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider<DrawerBloc>(
+            create: (_) => DrawerBloc(
+                //BlocProvider.of<AuthenticationCubit>(context),
+                ),
+          ),
+          BlocProvider<BottomNavCubit>(
+            create: (_) => BottomNavCubit(
+                //BlocProvider.of<AuthenticationCubit>(context),
+                ),
+          ),
+        ],
+        child: MainPage(),
+      ),
     );
   }
 }
