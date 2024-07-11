@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:superbootcamp_flutter/logic/bottom_navbar_cubit/bottom_nav_cubit.dart';
 import 'package:superbootcamp_flutter/logic/drawer_bloc/drawer_bloc.dart';
-import 'package:superbootcamp_flutter/logic_provoider/bloc_provider.dart';
+import 'package:superbootcamp_flutter/logic/news_api_bloc/news_api_bloc.dart';
 import 'package:superbootcamp_flutter/routes/go_router.dart';
+import 'package:superbootcamp_flutter/services/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +28,10 @@ class MyApp extends StatelessWidget {
               //BlocProvider.of<AuthenticationCubit>(context),
               ),
         ),
+        BlocProvider<NewsApiBloc>(
+            create: (_) => NewsApiBloc(NewsApiServices()
+                // BlocProvider.of<AuthenticationCubit>(context),
+                )),
       ],
       child: MaterialApp.router(
         title: 'Flutter Demo',

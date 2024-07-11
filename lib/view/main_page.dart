@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
             case 1:
               return ListViewPages();
             case 2:
-              return const Halaman1pages();
+              return const ThirdPartyPage();
             case 3:
               return ListViewPages();
             default:

@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> goToAuth() async {
     await Future.delayed(Duration(seconds: 3), () {
-      context.goNamed(RouteNames.halaman1);
+      context.goNamed(RouteNames.mainPage);
     });
   }
 
